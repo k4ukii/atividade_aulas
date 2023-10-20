@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+<title>cantina</title>
+
+</head>
+<html>
+<body>
+    <table>
+        <tr>
+<td>
+<h1>PEDIDO REALIZADO!</h1>
+<p>Detalhes:</p>
+<p id="nota"></p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>Preços</p>
+<p>X1 = R$ 1.36</p>
+<p>X2 = R$ 2.31</p>
+<p>Nugguets = R$ 3.69</p>
+<p>Fritas = R$ 1.58</p>
+<p>Agua = R$ 1.00</p>
+<p>Coca-Cola = R$ 1.48</p>
+</td>
+</tr>
+</table>
+
+
+<script>
+let nome = prompt ("Olá, por favor insira seu nome")
+let ham = prompt(nome+"! Gostaria de um X1 ou X2?(selecionar 0 ou 1 respectivamente)");
+let aco = prompt(nome+"! Gostaria de acrescentar Fritas ou Nugguets?(selecionar 0 ou 1 respectivamente)");
+let beb = prompt(nome+"! Gostaria de tomar Água ou Coca-Cola?(selecionar 0 ou 1 respectivamente)");
+
+const hamburguer = ["X1","X2"];
+const ph =[1.36,2.31];
+const acompanhamento = ["Fritas","Nugguets"];
+const pa = [1.58,3.69];
+const bebida = ["Água","Coca-Cola"];
+const pb = [1.00,1.48];
+const cardapio = [hamburguer, acompanhamento, bebida];
+let total =ph[ham]+pa[aco]+pb[beb] 
+
+document.getElementById("nota").innerHTML = nome+"<br>"+ cardapio[0][ham] + "<br>" + cardapio[1][aco] + "<br>" + cardapio[2][beb]+"<br>"+"Total R$:"+total.toFixed(3);
+</script>
+
+</body>
+</html>
